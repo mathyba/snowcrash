@@ -1,0 +1,76 @@
+# Files where token are stored
+token
+
+# VsCode
+.vscode
+
+# Created by https://www.toptal.com/developers/gitignore/api/python,vim
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,vim
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# End of https://www.toptal.com/developers/gitignore/api/python,vim
+
+# Project specific temporary files
+level01/Ressources/passwd
+level02/Ressources/level02.pcap
+.Xauthority
+.bash_history
+.config
+.john
+.python_history
+.ssh
+.cache
+.pylint.d
+.pyc
+.local
+
