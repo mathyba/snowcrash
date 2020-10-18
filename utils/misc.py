@@ -20,6 +20,12 @@ def level_tostr(level_number):
     return "level{:02d}".format(level_number)
 
 
+def flag_tostr(level_number):
+    """Convert integer <n> to 'level0<n>' string"""
+
+    return "flag{:02d}".format(level_number)
+
+
 def parse_token(getflag_output):
     """Parse getflag command output and return token"""
 

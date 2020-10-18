@@ -35,3 +35,10 @@ def store_token(level, token):
     """Store token"""
 
     _store_item(level, "token", token)
+
+
+def get_token(level):
+    """Retrieve token from token file in level Ressources directory"""
+
+    with open(f"{config.remote_path}/{level}/Ressources/token", "r") as myfile:
+        return myfile.read().rstrip()
