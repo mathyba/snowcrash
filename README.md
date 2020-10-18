@@ -70,3 +70,7 @@ docker run -v $(pwd):/snowcrash/snowcrash --net host -ti snowcrash-img
 
 - Volumes give access to local project directory from within the container. This makes it possible to modify files without reloading the container.
 - Hosts ethernet are made visible from within the container, so that the container may communicate with the VM
+
+## Exercice resolution
+
+A detailed walkthrough to solve the challenge in interactive mode is provided in each level directory.
