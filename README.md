@@ -73,4 +73,20 @@ docker run -v $(pwd):/snowcrash/snowcrash --net host -ti snowcrash-img
 
 ## Exercice resolution
 
-A detailed walkthrough to solve the challenge in interactive mode is provided in each level directory.
+Contrary to general practice in CTF challenges, a detailed walkthrough to solve the challenge in interactive mode is provided in each level directory.
+As many solutions to this project are already available online, it was felt that this would not be detrimental to the snow-crash challenge.
+Please note that explanations can be tediously thorough at times, or even leading through failed attempts before reaching the solution.
+The intent has been to record major steps in the (sometimes flawed) thought process of someone with no initial knowledge nor practice in security-related topics.
+
+### Script usage
+
+Scripts are provided to automate each level's resolution.
+Obtained level tokens will be stored, so once a level has been reached once, it may in the future be accessed directly.
+
+To run a script:
+`./python3 levelXX/Ressources/levelXX.py`
+
+To solve the challenge, you must start on level00:
+`./python3 level00/Ressources/level00.py`
+
+Aliases will be added shortly, as well as project-wide scripts to automate cleaning of tokens and temporary files.
