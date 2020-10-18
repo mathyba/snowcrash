@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+    solver:
+        build: .
+        volumes:
+            - $PWD:/home/snowcrash
+        network_mode: "host"
+        environment:
+            - PORT=4242
+            - HOST=localhost
+            - VM=192.168.0.169 # Fill in the IP provided by your virtual machine
+            - CONTAINER=192.168.0.115 # Fill in the IP address to reach the container from the VM
+            # With a bridge connection, this is the IP address for the network (via wifi or physical connection)
+            # Run ifconfig in the container
+            - PYTHONPATH=/home/snowcrash
+            - PATH=$PATH:/usr/lib/python3.8/site-packages:/sbin
+            - REMOTE_PATH=/home/snowcrash
+        entrypoint: /bin/bash
