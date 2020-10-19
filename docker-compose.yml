@@ -16,3 +16,11 @@ services:
             - PATH=$PATH:/usr/lib/python3.8/site-packages:/sbin
             - REMOTE_PATH=/home/snowcrash
         entrypoint: /bin/bash
+    wireshark:
+        image: ffeldhaus/wireshark
+        network_mode: host
+        volumes:
+            - ~/projets/snowcrash:/home/xpra
+        environment:
+            - PUID=1000
+            - GUID=1000

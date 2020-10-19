@@ -71,6 +71,18 @@ docker run -v $(pwd):/snowcrash/snowcrash --net host -ti snowcrash-img
 - Volumes give access to local project directory from within the container. This makes it possible to modify files without reloading the container.
 - Hosts ethernet are made visible from within the container, so that the container may communicate with the VM
 
+### Running the wireshark container
+
+To solve level02 interactively, you will need wireshark and its graphic interface.
+Since this is not possible within the container, a dedicated container can be started with docker-compose:
+
+```
+docker-compose run wireshark
+```
+
+Head to your browser on `https://localhost:14500` and enter a username of your choice and a password ("wireshark").
+You should then have access to all of wireshark's tools and the files within the project directory.
+
 ## Exercice resolution
 
 Contrary to general practice in CTF challenges, a detailed walkthrough to solve the challenge in interactive mode is provided in each level directory.
@@ -83,6 +95,7 @@ The intent has been to record major steps in the (sometimes flawed) thought proc
 Scripts are provided to automate each level's resolution.
 Obtained level tokens will be stored, so once a level has been reached once, it may in the future be accessed directly.
 
+<<<<<<< HEAD
 To run a script:
 `./python3 levelXX/Ressources/levelXX.py`
 
@@ -90,3 +103,24 @@ To solve the challenge, you must start on level00:
 `./python3 level00/Ressources/level00.py`
 
 Aliases will be added shortly, as well as project-wide scripts to automate cleaning of tokens and temporary files.
+=======
+To start solving levels starting with level00:
+
+```
+make solve
+```
+
+To start with a level XX between 00 and 14:
+Note that unless a token is stored in levelXX/Ressources/token, direct access to a level will fail.
+If a level is solved with a provided script, the next level's token will be stored.
+
+```
+make solve LEVEL=XX
+```
+
+To remove stored tokens and files created while solving challenges:
+
+```
+make clean
+```
+>>>>>>> a7fe43f... with wireshark
