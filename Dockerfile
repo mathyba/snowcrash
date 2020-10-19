@@ -11,6 +11,7 @@ FROM ubuntu:latest
 # Required to prevent interactive prompt while installing dependencies
 ENV ARCH=$(arch)
 ENV TERM=linux 
+ENV HOME=/home/snowcrash
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -y && apt-get install -y \
@@ -38,6 +39,8 @@ RUN apt-get update -y && apt-get install -y --fix-missing \
     && python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@stable \
     && python3 -m pip install pylint black
 
-WORKDIR "/snowcrash"
+RUN useradd -ms /bin/bash snowcrash
+RUN echo 'PS1="[\u@docker]\033[0;33m \w # \033[0;0m"' > /etc/bash.bashrc
+USER snowcrash
+WORKDIR /home/snowcrash
 
-#TODO add user
