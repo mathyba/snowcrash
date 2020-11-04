@@ -93,34 +93,29 @@ The intent has been to record major steps in the (sometimes flawed) thought proc
 ### Script usage
 
 Scripts are provided to automate each level's resolution.
-Obtained level tokens will be stored, so once a level has been reached once, it may in the future be accessed directly.
+Obtained level tokens will be stored, so once a level has been reached once, it may later be accessed directly.
+A Makefile is provided to facilitate the handling of scripts.
+Following commands should be run within the docker solver container:
 
-<<<<<<< HEAD
-To run a script:
-`./python3 levelXX/Ressources/levelXX.py`
-
-To solve the challenge, you must start on level00:
-`./python3 level00/Ressources/level00.py`
-
-Aliases will be added shortly, as well as project-wide scripts to automate cleaning of tokens and temporary files.
-=======
 To start solving levels starting with level00:
-
 ```
 make solve
 ```
-
 To start with a level XX between 00 and 14:
 Note that unless a token is stored in levelXX/Ressources/token, direct access to a level will fail.
 If a level is solved with a provided script, the next level's token will be stored.
-
 ```
 make solve LEVEL=XX
 ```
-
 To remove stored tokens and files created while solving challenges:
-
 ```
 make clean
 ```
->>>>>>> a7fe43f... with wireshark
+
+To check syntax and PEP8 compliance of python scripts:
+```
+make black
+```
+```
+make pylint
+```
