@@ -7,6 +7,7 @@ FROM ubuntu:latest
 #ENV PYTHONPATH "$PYTHONPATH:/snowcrash"
 #ENV PATH "$PATH:/usr/lib/python3.8/site-packages"
 #ENV REMOTE_PATH "/snowcrash"
+#ENV LOG_LEVEL "info"
 
 # Required to prevent interactive prompt while installing dependencies
 ENV ARCH=$(arch)

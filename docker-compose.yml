@@ -15,6 +15,7 @@ services:
             - PYTHONPATH=/home/snowcrash
             - PATH=$PATH:/usr/lib/python3.8/site-packages:/sbin
             - REMOTE_PATH=/home/snowcrash
+            - LOG_LEVEL=info
         entrypoint: /bin/bash
     wireshark:
         image: ffeldhaus/wireshark
