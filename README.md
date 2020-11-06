@@ -90,6 +90,12 @@ As many solutions to this project are already available online, it was felt that
 Please note that explanations can be tediously thorough at times, or even leading through failed attempts before reaching the solution.
 The intent has been to record major steps in the (sometimes flawed) thought process of someone with no initial knowledge nor practice in security-related topics.
 
+Useful websites and forum posts are provided in the walkthrough, when they have proved key to understanding or solving the challenge. 
+However, if I had to keep and recommend immoderately only one resource, it would be this excellent [First Introduction to System Exploitation](https://research.checkpoint.com/wp-content/uploads/2020/03/pwnable_writeup.pdf).  
+This guide aims for a delicate balance between accessibility and completeness, to help beginners build their knowledge and understanding of what's happening and enable them to act purposefully.  
+If you go through it prior to solving Snow Crash, you will be much more proactive in your search for solutions.
+
+
 ### Script usage
 
 Scripts are provided to automate each level's resolution.
